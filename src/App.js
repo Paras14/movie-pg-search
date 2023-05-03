@@ -83,7 +83,7 @@ function App() {
             </form>
           </div>
         </div>
-        <div className="grid grid-cols-5 gap-3 mx-8 my-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mx-8 my-6">
         {movieData.map((movie) => <MovieCard key={movie.imdbID} poster={movie.Poster} title={movie.Title} type={movie.Type} year={movie.Year} cardHandle={() => movieCardHandle(movie.Title, movie.Year)} />)}
         </div>
         
