@@ -49,7 +49,7 @@ function App() {
         <div className="flex-intial p-5 text-center bg-pink-600">{/*Issue! not displaying for some reason */}
           {/*Issue! not working for gradient, even with the inbuilt colors, check below*/}
           <h1 className='text-3xl font-oswald text-transparent bg-clip-text bg-gradient-to-r from-darkGold to-lightGold'>
-            Movies alike
+            Movies Parental Guide
           </h1>
           {/* <h1 className='font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
             Movie
