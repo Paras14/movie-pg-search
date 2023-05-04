@@ -17,6 +17,7 @@ function App() {
     fetch(`http://www.omdbapi.com/?s=${search}&apikey=${process.env.REACT_APP_OMDB_KEY}&type=movie`)
     .then((data) => data.json())
     .then((data) => {
+      console.log("data : ",data);
       setMovieData(data.Search);
       console.log(movieData);
 
@@ -27,8 +28,19 @@ function App() {
 
   }
 
-  const movieCardHandle = async (title, year) => {
-    console.log(title, year);
+  const movieCardHandle = (imdbID) => {
+    console.log(imdbID);
+    fetch(`http://localhost:8080/scrap?movieID=${imdbID}`)
+    .then((data) => data.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+
+  }
+
+  const searchExceptionHandler = () => {
+    return(
+      <div className="mx-auto my-auto text-xl z-10">Movie not found!</div>
+    );
   }
 
   // useEffect(() => {
@@ -84,7 +96,7 @@ function App() {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mx-8 my-6">
-        {movieData.map((movie) => <MovieCard key={movie.imdbID} poster={movie.Poster} title={movie.Title} type={movie.Type} year={movie.Year} cardHandle={() => movieCardHandle(movie.Title, movie.Year)} />)}
+        {movieData?movieData.map((movie) => <MovieCard key={movie.imdbID} poster={movie.Poster} title={movie.Title} type={movie.Type} year={movie.Year} cardHandle={() => movieCardHandle(movie.imdbID)} />): searchExceptionHandler()}
         </div>
         
       </div>
