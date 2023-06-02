@@ -32,11 +32,11 @@ function MoviePGPage() {
         </div>
         {movieData?
         <div className='m-2 p-5'>
-          <p className="font-normal text-lg"><span className='font-bold'>Advisory Alcohol:</span> {movieData["data"]["advisoryAlcohol"]}</p>
-          <p className="font-normal text-lg"><span className='font-bold'>Advisory Frightening:</span> {movieData["data"]["advisoryFrightening"]}</p>
-          <p className="font-normal text-lg"><span className='font-bold'>Advisory Nudity:</span> {movieData["data"]["advisoryNudity"]}</p>
-          <p className="font-normal text-lg"><span className='font-bold'>Advisory Profanity:</span> {movieData["data"]["advisoryProfanity"]}</p>
-          <p className="font-normal text-lg"><span className='font-bold'>Advisory Violence:</span> {movieData["data"]["advisoryViolence"]}</p>
+          <p className="font-normal text-lg"><span className='font-bold'>Advisory Alcohol:</span> {movieData["data"]["advisoryAlcohol"] === 'Be the first to evaluate this category'?'Sorry, but there is no information available on this category right now':movieData["data"]["advisoryAlcohol"]}</p>
+          <p className="font-normal text-lg"><span className='font-bold'>Advisory Frightening:</span> {movieData["data"]["advisoryFrightening"] === 'Be the first to evaluate this category'?'Sorry, but there is no information available on this category right now':movieData["data"]["advisoryFrightening"]}</p>
+          <p className="font-normal text-lg"><span className='font-bold'>Advisory Nudity:</span> {movieData["data"]["advisoryNudity"] === 'Be the first to evaluate this category'?'Sorry, but there is no information available on this category right now':movieData["data"]["advisoryNudity"]}</p>
+          <p className="font-normal text-lg"><span className='font-bold'>Advisory Profanity:</span> {movieData["data"]["advisoryProfanity"] === 'Be the first to evaluate this category'?'Sorry, but there is no information available on this category right now':movieData["data"]["advisoryProfanity"]}</p>
+          <p className="font-normal text-lg"><span className='font-bold'>Advisory Violence:</span> {movieData["data"]["advisoryViolence"] === 'Be the first to evaluate this category'?'Sorry, but there is no information available on this category right now':movieData["data"]["advisoryViolence"]}</p>
         </div>
         :''}
     </div>
