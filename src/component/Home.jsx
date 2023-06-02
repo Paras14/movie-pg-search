@@ -3,7 +3,6 @@ import { useState } from 'react';
 // import MovieCard from './MovieCard';
 import { Link, useNavigate } from 'react-router-dom';
 
-
 function Home() {
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
@@ -11,21 +10,6 @@ function Home() {
     navigate(`/search?q=${search}`);
     
   }
-
-
-
-  // useEffect(() => {
-  //   console.log(process.env.REACT_APP_OMDB_KEY);
-  //   fetch(`http://www.omdbapi.com/?s=the+gladiator&apikey=${process.env.REACT_APP_OMDB_KEY}`)
-  //   .then((data) => data.json())
-  //   .then((data) => {
-  //     console.log(data);
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //   })
-  // }, [])
-
 
   return (
     <div>

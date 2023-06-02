@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import MoviePGPage from './component/MoviePGPage';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/search",
     element: <SearchPage />
+  },
+  {
+    path: "/moviepage/:movieId",
+    element: <MoviePGPage />
   }
 ]);
 

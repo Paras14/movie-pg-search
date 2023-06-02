@@ -1,11 +1,12 @@
 import {React, useState, useEffect} from 'react';
 import MovieCard from './MovieCard';
-import {useSearchParams} from 'react-router-dom';
+import {useSearchParams, useNavigate} from 'react-router-dom';
 
 function SearchPage() {
 
   // const [search, setSearch] = useState('');
   const [movieData, setMovieData] = useState([]);
+  const navigate = useNavigate();
 
   const [searchParams] = useSearchParams();
 
@@ -29,12 +30,7 @@ function SearchPage() {
   console.log(movieData);
   
   const movieCardHandle = (imdbID) => {
-  console.log(imdbID);
-  fetch(`http://localhost:8080/scrap?movieID=${imdbID}`)
-  .then((data) => data.json())
-  .then((data) => console.log(data))
-  .catch((err) => console.log(err));
-
+    navigate(`/moviepage/${imdbID}`);
   }
 
     const searchExceptionHandler = () => {
