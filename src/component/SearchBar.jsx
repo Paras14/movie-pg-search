@@ -9,15 +9,10 @@ function SearchBar() {
     }
     return (
         <div className="flex flex-col">
-            <div className="flex-intial p-5 text-center bg-pink-600">{/*Issue! not displaying for some reason */}
-            {/*Issue! not working for gradient, even with the inbuilt colors, check below*/}
+            <div className="flex-intial p-5 text-center">
             <h1 className='inline-block text-3xl font-oswald text-transparent bg-clip-text bg-gradient-to-r from-darkGold to-lightGold'>
                 <Link to='/'>Movies Parental Guide</Link>
             </h1>
-            {/* <h1 className='font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
-                Movie
-            </h1> */}
-            
             </div>
             <div className="flex-intial mx-4 my-4">
             <div class="mb-3">
