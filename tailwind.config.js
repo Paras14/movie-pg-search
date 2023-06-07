@@ -7,6 +7,14 @@ module.exports = {
     extend: {
       fontFamily:{
         oswald: "Oswald, serif",
+        firaSans: "Fira Sans, sans-serif",
+        poltawskiNowy: "Poltawski Nowy, serif",
+        robotoCondensed: "Roboto Condensed, sans-serif",
+        abrilFatface: "Abril Fatface, cursive",
+        staatliches: "Staatliches, cursive",
+        sacramento: "Sacramento, cursive",
+        pacifico: "Pacifico, cursive"
+
       },
       colors:{
         lightGold: '#FCF6BA',
