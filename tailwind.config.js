@@ -10,7 +10,14 @@ module.exports = {
       },
       colors:{
         lightGold: '#FCF6BA',
-        darkGold: '#BF953F'
+        darkGold: '#BF953F',
+        brownLogoBg: '#472D2D',
+        brownLogoBgAlt1: '#562B08',
+        brownLogoBgAlt2: '#8E3200',
+        brownLogoBgAlt3: '#603601',
+        categBg: '#DDE6ED',
+        categItemBg: '#F8F6F4',
+        pgMovieCardBg: '#F1F6F9'
       },
     },
   },
