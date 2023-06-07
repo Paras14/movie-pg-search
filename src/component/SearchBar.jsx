@@ -9,8 +9,8 @@ function SearchBar() {
     }
     return (
         <div className="flex flex-col">
-            <div className="flex-intial p-5 text-center bg-brownLogoBgAlt1">
-            <h1 className='inline-block text-3xl font-oswald text-transparent bg-clip-text bg-gradient-to-r from-darkGold to-lightGold'>
+            <div className="flex-intial p-3 text-center bg-brownLogoBgAlt1">
+            <h1 className='inline-block lg:text-5xl md:text-5xl sm:text-5xl text-3xl text-transparent bg-clip-text bg-gradient-to-r from-darkGold to-lightGold font-abrilFatface'>
                 <Link to='/'>Movies Parental Guide</Link>
             </h1>
             </div>

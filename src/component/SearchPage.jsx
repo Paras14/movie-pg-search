@@ -39,7 +39,7 @@ function SearchPage() {
     <div>
       <SearchBar />
       {movieData ? (
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mx-8 my-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 mx-8 my-6">
           {movieData.map((movie) => (
             <MovieCard
               key={movie.imdbID}
